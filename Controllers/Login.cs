@@ -7,7 +7,7 @@ namespace MyMvcApiProject.Controllers
         // GET: /Login/Index
         public IActionResult Index()
         {
-            return View("Login");
+            return View("_Login");
         }
 
         // POST: /Login/Authenticate
@@ -21,13 +21,13 @@ namespace MyMvcApiProject.Controllers
             if (username == "demo" && password == "password")
             {
                 // Redirect to a dashboard or some other page on successful login
-                return RedirectToAction("Login");
+                return RedirectToAction("_Login");
             }
             else
             {
                 // Redirect back to the login page with an error message
                 ViewBag.ErrorMessage = "Invalid username or password";
-                return View("Login");
+                return View("_Login");
             }
         }
 
