@@ -6,20 +6,35 @@
 }
 
 @section Login {
-    <!-- The form for user login -->
-    <form asp-controller="Login" asp-action="Authenticate" method="post">
-        <div class="form-group">
-            <label asp-for="Username"></label>
-            <input asp-for="Username" class="form-control" />
-            <span asp-validation-for="Username" class="text-danger"></span>
-        </div>
+    <div class="container mt-5">
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Login</h2>
 
-        <div class="form-group">
-            <label asp-for="Password"></label>
-            <input asp-for="Password" type="password" class="form-control" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
+                <!-- The form for user login -->
+                <form asp-controller="Login" asp-action="Authenticate" method="post">
+                    <div class="form-group">
+                        <label asp-for="Username" class="fw-bold">Username</label>
+                        <input asp-for="Username" class="form-control" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
 
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+                    <div class="form-group">
+                        <label asp-for="Password" class="fw-bold">Password</label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add a simple animation -->
+    <script>
+        $(document).ready(function () {
+            $(".card").addClass("animate__animated animate__fadeInUp");
+        });
+    </script>
 }
