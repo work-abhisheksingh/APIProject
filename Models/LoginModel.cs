@@ -2,7 +2,7 @@
 
 namespace MyMvcApiProject.Models
 {
-    public class LoginViewModel
+    public class LoginModel
     {
         [Required(ErrorMessage = "Username is required")]
         public required string Username { get; set; }
