@@ -2,14 +2,14 @@
     // Attach a click event handler to the login button
     $("#loginButton").click(function () {
         // Add a CSS class to apply the desired animation
-        $(this).addClass("animated bounce"); // Replace "bounce" with the desired animation class
+        $(this).addClass("animate__animated animate__bounce"); // Using Animate.css classes
 
         // You can also include additional animation options from Animate.css, for example:
-        // $(this).addClass("animated bounceInLeft");
+        // $(this).addClass("animate__animated animate__bounceInLeft");
 
         // Wait for the animation to finish, then remove the animation class
         setTimeout(function () {
-            $("#loginButton").removeClass("animated bounce");
+            $("#loginButton").removeClass("animate__animated animate__bounce");
         }, 1000); // Adjust the duration (in milliseconds) based on your animation length
     });
 
