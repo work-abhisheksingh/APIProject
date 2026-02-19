@@ -3,6 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Register repositories
+builder.Services.AddScoped<MyMvcApiProject.Data.IBusinessRepository, MyMvcApiProject.Data.BusinessRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,6 +22,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapControllerRoute(
     name: "default",
